@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahul- Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(1, 1, 38);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+        
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            font-size: 1.01rem;
+            margin: 60px 84px;
+        }
+        
+        .left {
+            font-size: 1.5rem;
+            margin-right: 500px;
+            transition: scale 0.3s ease-in;
+        }
+        
+        .left:hover {
+            scale: 1.05;
+            color: #9c97f1;
+        }
+        
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 500px;
+            margin: 0px 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .firstSection>div {
+            width: 30%;
+        }
+        
+        .leftSection {
+            font-size: 3rem;
+        }
+        
+        .rightSection img {
+            width: 80%;
+            margin: 50px, 0;
+        }
+        
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+        
+        #element {
+            color: rgb(170, 107, 228);
+        }
+        
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+        
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+        
+        .text-gray {
+            color: gray;
+        }
+        
+        .secondSection .box {
+            background: white;
+            width: 39.2vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+        
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+        
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+        
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+        
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+        
+        footer {
+            background-color: #0e0e1a;
+        }
+        
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+        
+        .footer ul {
+            list-style-type: none;
+        }
+        
+        .footer>div {
+            width: 223px;
+        }
+        
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+        
+        .leftSection .btn {
+            padding: 12px;
+            font-size: small;
+            color: black;
+            background: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background-color: #a333cc;
+            transition: scale 1s ease-in;
+            transition: background-color 0.2s ease-in;
+            height: 45px;
+        }
+        
+        .btn:hover {
+            background-color: #57126f;
+            scale: 1.05;
+        }
+        
+        .animated {
+            animation: up-down 2s ease-in-out infinite alternate-reverse both;
+        }
+        
+        @media (max-width: 991px) {
+            #hero {
+                height: 100vh;
+                text-align: center;
+            }
+            #hero .animated {
+                animation: none;
+            }
+            #hero .hero-img {
+                text-align: center;
+            }
+            #hero .hero-img img {
+                width: 50%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 28px;
+                line-height: 36px;
+            }
+            #hero h2 {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 30px;
+            }
+            #hero .hero-img img {
+                width: 70%;
+            }
+        }
+        
+        @media (max-width: 575px) {
+            #hero .hero-img img {
+                width: 80%;
+            }
+            #hero .btn-get-started {
+                font-size: 16px;
+                padding: 10px 24px 11px 24px;
+            }
+        }
+        
+        @keyframes up-down {
+            0% {
+                transform: translateY(10px);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Rahul's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <div>Hi, I am Rahul and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><b>Download Resume</b></button>
+                    <button class="btn"><b>Visit GitHub</b></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://i.pinimg.com/originals/78/5a/1b/785a1b9c359640da6bc9cfe3670b42ba.png" class="img-fluid animated" alt=""></img>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far </span>
+
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="developer.png.png" alt="" />
+                    <div class="vertical-title">HTML Developer (2019-21)</div>
+                    <div class="vertical-desc">
+                        With a strong foundation in HTML, I've crafted clean, semantic code to build the structural backbone of web pages. My experience includes optimizing for accessibility and SEO, as well as implementing responsive design principles to ensure seamless compatibility
+                        across devices and browsers. </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="pngwing.com (2).png" alt="" />
+                    <div class="vertical-title">
+                        Experience in C language
+                    </div>
+
+                    <div class="vertical-desc">
+                        Proficient in the C programming language, I specialize in system-level programming, algorithmic problem-solving, and memory management. I've successfully delivered projects ranging from embedded systems development to high-performance computing applications,
+                        showcasing my ability to create efficient and reliable solutions tailored to specific requirements. </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="pngwing.com (1).png" alt="" />
+                    <div class="vertical-title">DSA in Java</div>
+                    <div class="vertical-desc">
+                        Experienced in Java development, I've contributed to the creation of robust and scalable software solutions across various domains. My expertise lies in Java's object-oriented principles, multithreading, and extensive libraries. I prioritize performance,
+                        maintainability, and flexibility in my designs, ensuring long-term success in diverse environments.
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="first">Rahul's Developer Portfolio</div>
+            <div class="second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright&#169;rahulsportfolio.com | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#element", {
+            strings: [
+                "Web Developer",
+                "Web Designer",
+            ],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
